@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.b1, .b2, .b3, .b4,.b8,.b9, .b10{
+display:inline-block;
+position: relative;
+margin:5px;
+float:left;
+width:6%;
+height:525px;
+background-color:#FFEBCD;
+border: 3px solid white;
+}
+
+body {
+	background-image: url("bgs.jpeg");
+	 background-size: 1300px 950px;
+}
+div
+{
+opacity:1;
+}
+
+body
+{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h4{
+color:black;
+}
+.b5, .b6, .b7,.b11{
+display:inline-block;
+position: relative;
+margin: 5px;
+float:left;
+width:8%;
+height:525px;
+background-color: #FFEBCD;
+border: 2px solid white;
+}
+
+body{
+background-color:black;
+color:white;
+}
+
+p{
+border:1px solid black;
+color:black;
+}
+
+.smallBox::before
+{
+  content:".";
+  width:15px;
+  height:15px;
+  float:left;
+  margin-right:10px;
+}
+.greenBox::before
+{
+  content:"";
+  background:Green;
+}
+.redBox::before
+{
+  content:"";
+  background:Red;
+}
+.emptyBox::before
+{
+  content="";
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    background-color:#ccc;
+}
+
+textarea
+{
+  border:none;
+  background:transparent;
+}
+
+ input[type=checkbox]:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align:middle;
+    text-align: center;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    background-color:#ccc;
+}
+
+input[type=checkbox]:checked:before {
+    background-color:red;
+    font-size: 15px;
+}
+
+.button {
+	background: transparent;
+         background-color: #BC8F8F;
+         border: 2px solid black;
+         color:black;
+         padding: 10px 10px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 10px;
+         margin: 2px 3px;
+         cursor: pointer;
+	border-radius: 5px;
+   }
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div><h1 align="center">Floor Plan</h1></div>
+<div class="b1">
+<h4 align="center">Zone 1</h4>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled >
+<input type="checkbox" class="seat" disabled  >
+</div>
+<div></div>
+<br>
+<input type="checkbox" class="seat" disabled >
+<input type="checkbox" class="seat" disabled >
+<div>
+<div></div>
+<input type="checkbox" class="seat"disabled>
+
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" disabled >
+<input type="checkbox" class="seat" disabled>
+</div>
+<div>
+<input type="checkbox" class="seat" disabled >
+<input type="checkbox" class="seat" disabled>
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" disabled>
+<input type="checkbox" class="seat" disabled >
+</div>
+<div>
+<input type="checkbox" class="seat" disabled>
+<input type="checkbox" class="seat" disabled>
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" disabled>
+<input type="checkbox" class="seat" disabled>
+</div>
+<div>
+<input type="checkbox" class="seat" disabled >
+<input type="checkbox" class="seat" disabled>
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" disabled >
+<input type="checkbox" class="seat" disabled>
+<div></div>
+</div>
+<div>
+<input type="checkbox" class="seat" disabled >
+<input type="checkbox" class="seat" disabled>
+<div></div>
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" disabled>
+</div>
+<div>
+<input type="checkbox" class="seat" disabled>
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="radio" name="" value="" title="cabin" disabled>
+<br>
+<br>
+</div>
+ <a href="zone1.html" class="button" title=" Click to book seat in zone 1">Zone 1</a>
+</div>
+ </div>
+</div>
+
+<div class="b2">
+<h4 align="center">Zone 2</h4>
+<div>
+<input type="radio" name="" value="" title="cabin" disabled>
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled>
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="zone2.html" class="button" title=" Click to book seat in zone 2">Zone 2</a>
+</div>
+</div>
+
+<div class="b3">
+<h4 align="center">Zone 3</h4>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<div></div>
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled>
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<div></div>
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<div></div>
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="zone3.html" class="button" title=" Click to book seat in zone 3">Zone 3</a>
+</div>
+</div>
+<div class="b4">
+<h4 align="center">Zone 4</h4>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat">
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" checked="checked2" disabled>
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="zone4.html" class="button" title=" Click to book seat in zone 4">Zone 4</a>
+</div>
+</div>
+<div class="b5">
+<h4 align="center">Zone 5</h4>
+<div>
+<input type="checkbox" class="seat" >
+
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" checked="checked2" disabled>
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" checked="checked2" disabled>
+</div>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<a href="zone5.html" class="button" title=" Click to book seat in zone 4">Zone 5</a>
+</div>
+</div>
+<div class="b6">
+<h4 align="center">Zone 6</h4>
+<div><p align="center">Back<br>Space</p></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled>
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div><br>
+<div><p align="center">HUB<br>room<br></p></div>
+<div><p align="center">Back<br>Space<br></p></div>
+<div>
+ <a href="zone6.html" class="button" title=" Click to book seat in zone 6">Zone 6</a>
+</div>
+</div>
+<div class="b7">
+<h4 align="center">Zone 7</h4>
+<div>
+<br>
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" checked="checked2" disabled >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="ex.html" class="button" title=" Click to book seat in zone 7">Zone 7</a>
+</div>
+</div>
+<div class="b8">
+<h4 align="center">Zone 8</h4>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled>
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="zone8.html" class="button" title=" Click to book seat in zone 8">Zone 8</a>
+</div>
+</div>
+<div class="b9">
+<h4 align="center">Zone 9</h4>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" checked="checked2" disabled>
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" checked="checked2" disabled >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="zone9.html" class="button" title=" Click to book seat in zone 9">Zone 9</a>
+</div>
+</div>
+<div class="b10">
+<h4 align="center">Zone10</h4>
+<div>
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="zone10.html" class="button" title=" Click to book seat in zone 10">Zone 10</a>
+</div>
+</div>
+<div class="b11">
+<h4 align="center">Zone11</h4>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<div></div>
+<input type="checkbox" class="seat" checked="checked2" disabled>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<div></div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" checked="checked2" disabled>
+</div>
+<br>
+<div></div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+<input type="checkbox" class="seat" >
+<input type="checkbox" class="seat" >
+</div>
+<br>
+<div>
+ <a href="zone11.html" class="button" title=" Click to book seat in zone 11">Zone 11</a>
+</div>
+</div>
+
+
+<p id="notification"></p>
+  <tr>
+    <td colspan="100"><div class="screen">Seat Legend</div></td><br>
+    <td rowspan="100">
+      <div class="smallBox greenBox">Available Seats</div> <br/>
+      <div class="smallBox redBox">Reserved Seats</div><br/>
+      <div class="smallBox emptyBox">Occupied Seats</div><br/>
+      <div><b>Click on the zone to book seats<b></div>
+    </td>
+    <br/>
+  </tr>
+<button onclick="myFunction()">Print this page</button>
+<div>
+<script>
+function myFunction() {
+  window.print();
+}
+</script>
+</div>
+  </div>
+</body>
+</html>

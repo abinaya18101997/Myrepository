@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>floor seating plan</title>
+      <style>
+         @import url(https://fonts.googleapis.com/css?family=Lobster);
+         body{
+         font-family: 'Lobster';
+         background-image: url('bgss.jpeg');
+         background-size: 1300px 950px;
+         opacity: 0.95;
+         }
+         .one{
+         float:left;  
+         width:26%; 
+         height:760px;
+         border-top:2px solid black;
+         border-bottom:2px solid black;
+         border-left:2px solid black; 
+         margin-left:190px;
+         background-color:white;
+         }
+         .two{
+         float:left;  
+         width:10%; 
+         height:760px;
+         border-top:2px solid black;
+         border-bottom:2px solid black;
+         border-left:2px solid black; 
+         background-color:white;
+         }
+         .legend{
+         float:left;  
+         width:30%; 
+         height:210px; 
+         margin-left:230px;
+         margin-top:470px;
+         }
+         br {
+         display: block;
+         line-height: 0px;
+         }
+         .seperator {
+         width: 10%;
+         display: inline-block;
+         }
+         .left {
+         float: left;
+         }
+         .right {
+         float: right;
+         }
+         .seperators {
+         width: 20%;
+         display: inline-block;
+         }
+         .lefts {
+         float: left;
+         }
+         .tooltip {
+         position: relative;
+         display: inline-block;
+         border-bottom: 1px dotted black;
+         }
+         .tooltip .tooltiptext {
+         visibility: hidden;
+         width: 120px;
+         background-color: black;
+         color: #fff;
+         text-align: center;
+         border-radius: 6px;
+         padding: 5px 0;
+         -moz-border-radius: 5px;
+         /* Position the tooltip */
+         position: absolute;
+         z-index: 1;
+         top: -5px;
+         right: 110%;
+         width:200px;
+         border-top: 8px solid transparent;
+         border-bottom: 8px solid transparent;
+         border-right:8px solid black;
+         }
+         .tooltip:hover .tooltiptext {
+         visibility: visible;
+         }
+         * {
+         box-sizing: border-box;
+         }
+         /* Fix the button on the left side of the page */
+         .open-btn {
+         display: flex;
+         justify-content: left;
+         }
+         /* Style and fix the button on the page */
+         .open-button {
+         background-color: #1c87c9;
+         color: white;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         opacity: 0.8;
+         position: fixed;
+         }
+         /* Position the Popup form */
+         .login-popup {
+         position: relative;
+         text-align: center;
+         width: 100%;
+         }
+         /* Hide the Popup form */
+         .form-popup {
+         display: none;
+         position: fixed;
+         left: 55%;
+         top:15%;
+         transform: translate(-45%,5%);
+         border: 2px solid #666;
+         z-index: 9;
+         }
+         /* Styles for the form container */
+         .form-container {
+         max-width: 300px;
+         padding: 20px;
+         background-color: black;
+         color:white;
+         font-family: "Roboto", Helvetica, Arial, sans-serif;
+         }
+         /* Full-width for input fields */
+         .form-container input[type=text], .form-container input[type=textarea] {
+         width: 100%;
+         padding: 10px;
+         margin: 5px 0 22px 0;
+         border: none;
+         background: #eee;
+         }
+         /* When the inputs get focus, do something */
+         .form-container input[type=text]:focus, .form-container input[type=textarea]:focus {
+         background-color: #ddd;
+         outline: none;
+         }
+         /* Style book/form button */
+         .form-container .btn {
+         background-color: #8ebf42;
+         color: #fff;
+         padding: 12px 20px;
+         border: none;
+         cursor: pointer;
+         width: 100%;
+         margin-bottom:10px;
+         opacity: 0.8;
+         }
+         /* Style cancel button */
+         .form-container .cancel {
+         background-color: #cc0000;
+         }
+         /* Hover effects for buttons */
+         .form-container .btn:hover, .open-button:hover {
+         opacity: 1;
+         }
+         .comment {
+         width: 100%;
+         height: 100px;
+         padding: 10px;
+         background-color: white;
+         font: 1.2em/1.4em cursive;
+         color: #095484;
+         }
+         #blink {
+         -webkit-animation-name: blinker;
+         -webkit-animation-iteration-count: infinite;
+         -webkit-animation-duration: 2s;
+         font-family: lobster , cursive;
+         text-align: center;
+         }
+         @-webkit-keyframes blinker {
+         0% { color: white; 
+         text-shadow: red 0px 0px 20px;
+         }
+         50% { color: white;
+         text-shadow: blue 0px 0px 20px;
+         }
+         100% { color: white;
+         text-shadow: red 0px 0px 20px;
+         }
+         }
+         h1 {
+         -webkit-animation-iteration-count: infinite;
+         -webkit-animation-duration: 3s;
+         -webkit-animation-name: woosher;
+         color: white;
+         }
+         @-webkit-keyframes  woosher {
+         0% {
+         margin-left: 100%;
+         width: 300%;
+         }
+         100% {
+         margin-left: 50%;
+         width: 100%;
+         }
+         }
+         #button {
+         background-color: black;
+         border: none;
+         color:#fff;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         cursor: pointer;
+         border-radius: 5px;
+         position: absolute;
+         padding: 20px 30px;
+         top: 60px;
+         left: 950px;
+         font-size: 20px;
+         font-family: 'Lobster';
+         }
+         @media print { 
+         .noprint { 
+         visibility: hidden; 
+         } 
+         } 
+      </style>
+   </head>
+   <body>
+      <h2 align="left" style="margin-left:330px; color:white;">Zone 5 Floor Plan</h2>
+      <div>
+         <div class="one">
+            <div>
+               <img src="cabin.jpeg" alt="seat" style="width:25px;height:30px;margin-left:2px;">
+               <label style="margin-left:10px;;margin-top:20px;">WS 1051</label>
+               <label style="margin-left:128px;;margin-top:20px;color:white;">WS 1074</label>
+               <img src="white.png"  alt="seat" style="width:25px;height:30px;margin-right:0px;">
+            </div>
+            <br>
+            <div>
+               <img src="white.png"  alt="seat"style="width:25px;height:30px;margin-left:2px;">
+               <label style="margin-left:10px;margin-top:20px;color:white;">WS 1052</label>
+               <label style="margin-left:128px;">WS 1073</label>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+            </div>
+            <div>
+               <hr class="seperator left" >
+               <hr class="seperator right" >
+            </div>
+            <br>
+            <div class="open-btn">
+               <img src="green.jpeg"  alt="seat"  style="width:25px;height:30px;margin-left:2px; class="open-button" onclick="openForm()"">
+               <label style="margin-left:10px;;margin-top:20px;">WS 1053</label>
+               <label style="margin-left:138px;;margin-top:20px;">WS 1072</label>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+            </div>
+            <div class="login-popup">
+               <div class="form-popup" id="popupForm">
+                  <form action="/action_page.php" class="form-container">
+                     <h2>Book Seat</h2>
+                     <label for="reason">
+                     </label>
+                     <p>Seat is available. Do you want to reserve it on your name Kiran.R(email:Kiran@collins.com)</p>
+                     <textarea  class="comment" placeholder="Reason for booking seat...." tabindex="5" required></textarea>
+                     <br>
+                     <br>
+                     <button type="submit" class="btn">Book</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                  </form>
+               </div>
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat"  style="width:25px;height:30px;">
+               <label style="margin-left:10px;;margin-top:20px;">WS 1054</label>
+               <label style="margin-left:138px;;margin-top:20px;">WS 1071</label>
+               <img src="seatb.png"  alt="seat"  title="occupied" style="width:25px;height:30px;margin-right:0px;">
+            </div>
+            <div>
+               <hr class="seperator left" >
+               <hr class="seperator right" >
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;;margin-top:20px;">WS 1055</label>
+               <label style="margin-left:128px;;margin-top:20px;">WS 1070</label>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;;margin-top:20px;">WS 1056</label>
+               <label style="margin-left:128px;;margin-top:20px;">WS 1069</label>
+               <img src="seatb.png"  alt="seat" title="occupied"  style="width:25px;height:30px;margin-right:0px;">
+            </div>
+            <div>
+               <hr class="seperator left" >
+               <hr class="seperator right" >
+            </div>
+            <br>
+            <div class="open-btn">
+               <img src="green.jpeg"  alt="seat"  style="width:25px;height:30px;margin-left:2px; class="open-button" onclick="openForm()"">
+               <label style="margin-left:10px;;margin-top:20px;">WS 1057</label>
+               <label style="margin-left:138px;;margin-top:20px;">WS 1068</label>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-left:2px;">
+               <label style="margin-left:10px;;margin-top:20px;">WS 1058</label>
+               <label style="margin-left:128px;;margin-top:20px;">WS 1067</label>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+               <div>
+                  <hr class="seperator left" >
+                  <hr class="seperator right" >
+               </div>
+               <br>
+               <div>
+                  <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-left:2px;">
+                  <label style="margin-left:10px;;margin-top:20px;">WS 1059</label>
+                  <label style="margin-left:128px;;margin-top:20px;">WS 1066</label>
+                  <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+               </div>
+               <br>
+               <div>
+                  <img src="seatb.png"  alt="seat" title="occupied"  style="width:25px;height:30px;margin-left:2px;">
+                  <label style="margin-left:10px;;margin-top:20px;">WS 1060</label>
+                  <label style="margin-left:128px;;margin-top:20px;">WS 1065</label>
+                  <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+               </div>
+               <div>
+                  <hr class="seperator left" >
+                  <hr class="seperator right" >
+               </div>
+               <br>
+               <div>
+                  <div class="tooltip"><img src="red.jpeg"  alt="seat" style="width:25px;height:30px;margin-left:4px;"><span class="tooltiptext">Reserved by Ankit Pandey(email: anket.pandey@collins.com) U2/FF/WS/1160</span></div>
+                  <label style="margin-left:10px;;margin-top:20px;">WS 1061</label>
+                  <label style="margin-left:128px;;margin-top:20px;">WS 1065</label>
+                  <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+               </div>
+               <br>
+               <div>
+                  <img src="white.png"  alt="seat" style="width:25px;height:30px;margin-left:2px;">
+                  <label style="margin-left:10px;;margin-top:20px;color:white;">WS 1062</label>
+                  <label style="margin-left:128px;;margin-top:20px;">WS 1065</label>
+                  <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+               </div>
+               <div>
+                  <hr class="seperator left" >
+                  <hr class="seperator right" >
+               </div>
+               <br>
+               <div>
+                  <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+                  <label style="margin-left:10px;;margin-top:20px;">WS 1063</label>
+               </div>
+               <br>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+               <label style="margin-left:128px;;margin-top:20px;">TM 1005</label>
+               <img src="cabin.jpeg"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+            </div>
+         </div>
+         <div class="two">
+            <div>
+               <img src="white.png" alt="seat" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;color:white;">WS 1064</label>
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <div>
+               <hr class="seperator left" >
+            </div>
+            <div>
+               <img src="white.png" alt="seat" style="width:25px;height:35px;">
+               <label style="margin-left:10px;margin-top:20px;color:white;">WS 1064</label>
+            </div>
+            <br>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <div>
+               <hr class="seperator left" >
+            </div>
+            <br>
+            <div>
+               <div class="tooltip"><img src="red.jpeg"  alt="seat" style="width:25px;height:30px;margin-left:2px;"><span class="tooltiptext">Reserved by Ankit Pandey(email: anket.pandey@collins.com) U2/FF/WS/1160</span></div>
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <div>
+               <hr class="seperator left" >
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:32.5px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:32.5px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <div>
+               <hr class="seperator left" >
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <br>
+            <div>
+               <div class="tooltip"><img src="red.jpeg"  alt="seat" style="width:25px;height:30px;margin-left:2px;"><span class="tooltiptext">Reserved by Ankit Pandey(email: anket.pandey@collins.com) U2/FF/WS/1160</span></div>
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <div>
+               <hr class="seperator left" >
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <br>
+            <div>
+               <img src="white.png"  alt="seat" title="occupied" style="width:25px;height:30px;margin-left:2px;">
+               <label style="margin-left:10px;margin-top:20px;color:white;">WS 1064</label>
+            </div>
+            <div>
+               <hr class="seperator left" >
+            </div>
+            <br>
+            <div>
+               <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+               <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+            </div>
+            <br>
+            <img src="seatb.png"  alt="seat" title="occupied" style="width:25px;height:30px;">
+            <label style="margin-left:10px;margin-top:20px;">WS 1064</label>
+         </div>
+         <div class="legend" style="color:white; font-size:18px;">
+            <h3 style="margin-left:200px;">Seat Legend:</h3>
+            <div>
+               <img src="green.jpeg"  alt="seat"  style="width:25px;height:30px;margin-left:200px;border:2px solid green"> <label style="padding-right:1em">Available</label><br><br>
+               <img src="red.jpeg"  alt="seat"  style="width:25px;height:30px;margin-left:200px; border:2px solid red"> <label style="padding-right: 1em">Reserved</label><br><br>
+               <img src="seatb.png"  alt="seat"  style="width:25px;height:30px;margin-left:200px; border:2px solid grey"> <label style="padding-right: 1em">Occupied</label><br><br>
+               <div>
+                  <script>
+                     function print() {
+                     		const filename  = 'zone3.pdf';
+                     
+                     		html2canvas(document.querySelector('#nodeToRenderAsPDF')).then(canvas => {
+                     			let pdf = new jsPDF('p', 'mm', 'a4');
+                     			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+                     			pdf.save(filename);
+                     		}
+                     window.print();
+                     );
+                     	}
+                     
+                     // Variant
+                     // This one lets you improve the PDF sharpness by scaling up the HTML node tree to render as an image before getting pasted on the PDF.
+                     function print(quality = 1) {
+                     		const filename  = 'zone3.pdf';
+                     
+                     		html2canvas(document.querySelector('#nodeToRenderAsPDF'), 
+                     								{scale: quality}
+                     						 ).then(canvas => {
+                     			let pdf = new jsPDF('p', 'mm', 'a4');
+                     			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+                     			pdf.save(filename);
+                     		});
+                     	}
+                  </script>
+               </div>
+               <p  class="noprint" id="blink" style="font-size:18px;"><b> Click on the available seat to proceed with your allocation</b></p>
+            </div>
+         </div>
+         <script>
+            function openForm() {
+              document.getElementById("popupForm").style.display="block";
+            }
+            
+            function closeForm() {
+              document.getElementById("popupForm").style.display="none";
+            }
+         </script>
+         <button class = "noprint" id="button" onclick="print()">Click here to print Zone 5</button><br><br>
+      </div>
+   </body>
+</html>

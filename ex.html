@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  float: left;
+  margin-left:5px;
+   
+}
+br {
+   display: block;
+   margin: 5px 0;
+}
+
+.glow {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #4dffde, 0 0 40px #4dffde, 0 0 50px #4dffde, 0 0 60px #4dffde , 0 0 70px #4dffde, 0 0 80px #4dffde;
+  }
+}
+
+
+      
+
+
+
+.reserved{
+
+width:245px;height:37px;
+     border: solid 1px #555; 
+  padding: 1px;
+margin-top: 0px;
+
+background: rgba(240, 52, 52, 1);
+box-sizing:border-box;
+box-shadow: 0 15px 25px rgba(0,0,0,.5);
+border-radius: 10px;
+
+}
+
+
+.cd{
+margin-top:15px;
+}
+
+.card1{
+
+width:245px;height:75px;
+border: solid 1px #555; 
+padding: 1px;
+margin-top: 0px;
+box-shadow: 0 15px 25px rgba(0,0,0,.5);
+background: rgba(0,0,0,.8);
+
+box-sizing:border-box;
+border-radius: 10px;
+}
+
+.card2{
+
+width:245px;height:75px;
+     border: solid 1px #555; 
+  padding: 1px;
+margin-top: 0px;
+box-shadow: 0 15px 25px rgba(0,0,0,.5);
+background: rgba(0,0,0,.8);
+
+box-sizing:border-box;
+border-radius: 10px;
+}
+
+.card{
+ width:245px;height:37px;
+     border: solid 1px #555; 
+  padding: 1px;
+margin-top: 0px;
+
+background: rgba(0,0,0,.8);
+box-sizing:border-box;
+box-shadow: 0 15px 25px rgba(0,0,0,.5);
+border-radius: 10px;
+      
+}
+
+.lcard{
+width:95px;height:30px;
+     border: solid 1px #555; 
+  padding: 1px;
+margin-top: 0px;
+background: rgba(0,177,106,1);
+box-sizing:border-box;
+box-shadow: 0 15px 25px rgba(0,0,0,.5);
+border-radius: 10px;
+}
+
+.rcard{
+width:95px;height:30px;
+   border: solid 1px #555; 
+  padding: 1px;
+margin-top: 0px;
+
+background: rgba(240, 52, 52, 1);
+box-sizing:border-box;
+box-shadow: 0 15px 25px rgba(0,0,0,.5);
+border-radius: 10px;
+
+}
+
+.ocard{
+width:95px;height:30px;
+border: solid 1px #555; 
+  padding: 1px;
+margin-top: 0px;
+
+background: rgba(0,0,0,.8);
+box-sizing:border-box;
+box-shadow: 0 15px 25px rgba(0,0,0,.5);
+border-radius: 10px;
+}
+
+
+.container0{
+float:left;  
+margin: 15px;
+
+                width:22%; 
+                height:700px;
+}
+
+.container1{
+float:left;  
+margin: 15px;
+                width:26%; 
+                height:700px;
+}
+
+.container2{
+float:left;  
+
+                width:25%; 
+                height:700px;
+}
+
+.container3{
+float:left;  
+margin: 15px;
+                width:15%; 
+                height:700px;
+}
+
+
+body{
+background:url('img.jpeg');
+ background-size: 1300px 950px;
+color:white;
+}
+
+button{
+background: transparent;
+         background-color:#fff;
+         border: none;
+         color:black;
+         padding: 5px 5px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 14px;
+         cursor: pointer;
+	border-radius: 5px;
+	 position: absolute;
+       
+}
+
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h2 align="center"> Zone 7 floor plan</h2>
+<div class="full">
+<div class="container0">
+<div class="card2">
+<img class="cd" src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<br><b>Dharam Ramamurty </b><br>U2/FF/TM/1010 
+</div>
+<br>
+<div class="card">
+<p align="center"><b>~~~SPACE~~~</b></p>
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Sajjanar</b><br>U2/FF/WS/1183
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Abinaya Lakshmi J</b> <br>U2/FF/WS/1182
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Soumya Sajjanar</b> <br>U2/FF/WS/1181
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Naveen Hiriyannaiah</b> <br>U2/FF/WS/1180
+</div>
+<br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Srinivas Sanga</b> <br>U2/FF/WS/1179
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Sudendra Nayak</b> <br>U2/FF/WS/1178
+</div>
+
+<div class="available">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<button class="open-button" onclick="openForm()">Available</button><br>U2/FF/WS/1177
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Book Seat</h1>
+    
+    <textarea placeholder="Reason for booking seat...." tabindex="5" required></textarea>
+
+    <button type="submit" class="btn">Book</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</div><br>
+
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Skanada GoplaKrishna</b> <br>U2/FF/WS/1176
+</div>
+<div class="card">
+<p align="center"><b>~~~SPACE~~~</b></p>
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Mahesh Ainapure</b> <br>U2/FF/WS/1175
+
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>HariKrishnan KG</b> <br>U2/FF/WS/1162
+</div>
+</div>
+<div class="container1">
+<div class="card2">
+<img class="cd" src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<br><b>Ajay Sundaramurthy </b><br>U2/FF/WS/1162 
+</div>
+<br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Sonali Biranwar</b> <br>U2/FF/WS/1163
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Akshara Ravishankar</b> <br>U2/FF/WS/1164
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Muthulakshmi</b> <br>U2/FF/WS/1165
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Poonam Kamat</b> <br>U2/FF/WS/1166
+</div><br>
+<div class="reserved">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>RESERVED</b> <br>U2/FF/WS/1167
+</div>
+<br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Venatesan Muthulingam</b> <br>U2/FF/WS/1168
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Sanat Choudury</b> <br>U2/FF/WS/1169
+</div>
+
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Senthil RamaKrishna</b> <br>U2/FF/WS/1170
+</div><br>
+
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Shirly Shekar</b> <br>U2/FF/WS/1171
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Radha Boddu</b> <br>U2/FF/WS/1172
+</div><br>
+<div class="card1">
+<img class="cd" src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Uday Panchal</b> <br>U2/FF/TM/1011
+<p class="glow" align="center"><b>Cabin</b></p>
+</div>
+</div><br>
+<div class="v1">
+</div>
+<div class="v1">
+</div>
+<div class="container2">
+<div class="card1">
+<img class="cd" src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Dharam Ramamurty </b><br>U2/FF/TM/1010
+<p class="glow" align="center"><b>Cabin</b></p> 
+</div>
+<br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Sundeep Nag</b> <br>U2/FF/WS/1184
+</div>
+<div class="available"div class="available" onclick="location.href='s2f1z7.html';" style="cursor:pointer;">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>AVAILABLE</b> <br>U2/FF/WS/1183
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Abinaya Lakshmi J</b> <br>U2/FF/WS/1182
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Soumya Sajjanar</b> <br>U2/FF/WS/1181
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Naveen Hiriyannaiah</b> <br>U2/FF/WS/1180
+</div>
+<br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Srinivas Sanga</b> <br>U2/FF/WS/1179
+</div><br>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Sudendra Nayak</b> <br>U2/FF/WS/1178
+</div>
+
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Minni Yadav</b> <br>U2/FF/WS/1177
+</div><br>
+
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Skanada GoplaKrishna</b> <br>U2/FF/WS/1176
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>Mahesh Ainapure</b> <br>U2/FF/WS/1175
+</div><br>
+<div class="available">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>AVAILABLE</b> <br>U2/FF/WS/1174
+</div>
+<div class="card">
+<img src="jp.jpeg" alt="image" style="width:50px;height:35px;margin-right:15px;">
+<b>HariKrishnan KG</b> <br>U2/FF/WS/1162
+</div><br>
+</div>
+</div>
+<div class="box">
+<div class="container3">
+<h3 align="center"> Seat Leagend</h3>
+<div class="lcard">
+AVAILABLE
+</div><br>
+<div class="rcard">
+RESERVED
+</div><br>
+<div class="ocard">
+OCCUPIED
+</div><br>
+<button onclick="myFunction()">Print this page</button>
+<script>
+function myFunction(){
+  window.print();
+}
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>

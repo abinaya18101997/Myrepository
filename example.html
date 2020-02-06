@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+
+	.one{
+		border:1px solid black;
+		margin-left:10px;
+		height:800px;
+		width:25%;
+}
+      * {
+      box-sizing: border-box;
+      }
+      /* Fix the button on the left side of the page */
+      .open-btn {
+      display: flex;
+      justify-content: left;
+      }
+      /* Style and fix the button on the page */
+      .open-button {
+      background-color: #1c87c9;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      }
+      /* Position the Popup form */
+      .login-popup {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      }
+      /* Hide the Popup form */
+      .form-popup {
+      display: none;
+      position: fixed;
+      left: 45%;
+      top:5%;
+      transform: translate(-45%,5%);
+      border: 2px solid #666;
+      z-index: 9;
+      }
+      /* Styles for the form container */
+      .form-container {
+      max-width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      }
+      /* Full-width for input fields */
+      .form-container input[type=text], .form-container input[type=textarea] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #eee;
+      }
+      /* When the inputs get focus, do something */
+      .form-container input[type=text]:focus, .form-container input[type=textarea]:focus {
+      background-color: #ddd;
+      outline: none;
+      }
+      /* Style submit/login button */
+      .form-container .btn {
+      background-color: #8ebf42;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+      }
+      /* Style cancel button */
+      .form-container .cancel {
+      background-color: #cc0000;
+      }
+      /* Hover effects for buttons */
+      .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+      }
+.comment {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      background-color: white;
+      font: 1.4em/1.6em cursive;
+      color: #095484;
+}
+    </style>
+  </head>
+  <body>
+<div class="one">
+    <div class="open-btn">
+       <img src="seatb.jpeg" alt="Avatar"  style="width:25px;height:30px; class="open-button" onclick="openForm()">
+	<label style="margin-left:10px;;margin-top:20px;">WS 1053</label>
+<label style="margin-left:124px;;margin-top:20px;">WS 1072</label>
+<img src="seatb.jpeg"  alt="seat" title="occupied" style="width:25px;height:30px;margin-right:0px;">
+    </div>
+    <div class="login-popup">
+      <div class="form-popup" id="popupForm">
+        <form action="/action_page.php" class="form-container">
+          <h2>Book Seat</h2>
+          <label for="psw">
+          </label>
+         <p>Seat is available. Do you want to reserve it on your name Kiran.R(email:Kiran@collins.com)</p>
+          <textarea  class="comment" placeholder="Reason for booking seat...." tabindex="5" required></textarea>
+          <br>
+          <br>
+          <button type="submit" class="btn">Book</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    </div>
+</div>
+    <script>
+      function openForm() {
+        document.getElementById("popupForm").style.display="block";
+      }
+      
+      function closeForm() {
+        document.getElementById("popupForm").style.display="none";
+      }
+    </script>
+  </body>
+</html>

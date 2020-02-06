@@ -1,0 +1,118 @@
+ @import url(https://fonts.googleapis.com/css?family=Lobster);
+         .zone1,.zone2,.zone3,.zone4,.zone5,.zone8,.zone9,.zone10,.zone11{
+         float:left;  
+         width:6%; 
+         height:770px;
+         border:2px solid black; 
+         margin-left:10px;
+         background-color:white;
+         }
+         .zone6,.zone7{
+         float:left;  
+         width:6%; 
+         height:770px;
+         border:2px solid black;
+         background-color:white;
+         }
+         .zone5ext{
+         float:left;  
+         width:3%; 
+         height:770px;
+         border-left:2px solid black;
+         background-color:white;
+         }      
+         .zone6ext{
+         float:left;  
+         width:3%; 
+         height:770px;
+         border-top:2px solid black; 
+         border-bottom:2px solid black;
+         border-right:2px solid black;
+         margin-left:10px;
+         background-color:white;
+         }
+         .zone7ext{
+         float:left;  
+         width:3%; 
+         height:770px;
+         border-top:2px solid black; 
+         border-bottom:2px solid black;
+         border-right:2px solid black;
+         margin-left:10px;
+         background-color:white;
+         }
+         .zone11ext{
+         float:left;  
+         width:3%; 
+         height:770px;
+         border-top:2px solid black; 
+         border-bottom:2px solid black;
+         border-left:2px solid black;
+         background-color:white;
+         }      
+         h3,h2,label,.legend{
+         color:#313131; 
+         -webkit-animation:colorchange 20s infinite alternate;
+         }
+         @-webkit-keyframes colorchange {
+         0% {
+         color: blue;
+         }
+         10% {
+         color: #8e44ad;
+         }
+         20% {
+         color: #1abc9c;
+         }
+         30% {
+         color: #d35400;
+         }
+         40% {
+         color: blue;
+         }
+         50% {
+         color: #34495e;
+         }
+         60% {
+         color: black;
+         }
+         70% {
+         color: #2980b9;
+         }
+         80% {
+         color: green;
+         }
+         90% {
+         color: #2980b9;
+         }
+         100% {
+         color: red;
+         }
+         }
+         .seperator {
+         width: 35%;
+         display: inline-block;
+         }
+         .left {
+         float: left;
+         }
+         .right {
+         float: right;
+         }
+         .bottomleft {
+         position: absolute;
+         bottom: 0;
+         left: 800px;
+         font-size: 14px;
+         }
+         h2{
+         font-family: 'Lobster';
+         }
+         h3{
+         font-family: 'Lobster';
+         }
+         label{
+         color:white;
+         font-size:16px;
+         font-family: 'Lobster';
+         }

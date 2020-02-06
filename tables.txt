@@ -1,0 +1,29 @@
+CREATE TABLE Manager
+(
+  hrms_id VARCHAR(10) NOT NULL,
+  password VARCHAR(10) NOT NULL,
+  name VARCHAR(300) NOT NULL,
+  email_id VARCHAR(1000) NOT NULL,
+  PRIMARY KEY (hrms_id)
+);
+
+CREATE TABLE bookseat
+(
+  seat_id VARCHAR(8) NOT NULL,
+  hrms_id VARCHAR(10) NOT NULL,
+  reason VARCHAR(1000) NOT NULL,
+  email_id VARCHAR(1000) NOT NULL,
+  name VARCHAR(300) NOT NULL,
+  PRIMARY KEY (hrms_id)
+);
+
+CREATE TABLE Login
+(
+  hrms_id VARCHAR(10) NOT NULL,
+  password VARCHAR(10) NOT NULL,
+  hrms_id VARCHAR(10) NOT NULL,
+  hrms_id VARCHAR(10) NOT NULL,
+  PRIMARY KEY (hrms_id),
+  FOREIGN KEY (hrms_id) REFERENCES Manager(hrms_id),
+  FOREIGN KEY (hrms_id) REFERENCES bookseat(hrms_id)
+);
